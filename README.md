@@ -6,10 +6,12 @@ A gRPC implementation of the [error strategy interface](#error-strategy-interfac
 
 ```typescript
 interface ErrorStrategy {
+  badImplementation: (message: string, innerError?: Error): Error,
   badRequest: (message: string, innerError?: Error): Error,
+  forbidden: (message: string, innerError?: Error): Error,
   notFound: (message: string, innerError?: Error): Error,
   notImplemented: (message: string, innerError?: Error): Error,
-  unauthorized: (message: string, innerError?: Error): Error,
+  preconditionFailed: (message: string, innerError?: Error): Error,
   unavailable: (message: string, innerError?: Error): Error,
 
   propagate: (message: string, innerError: Error, targetErrorStrategy: ErrorStrategy): Error
