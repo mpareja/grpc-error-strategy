@@ -1,0 +1,54 @@
+{
+  "name": "grpc-error-strategy",
+  "version": "1.0.1",
+  "description": "A gRPC implementation of the error strategy interface",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "opener": "^1.5.1",
+    "rimraf": "^2.6.3",
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "clean": "rimraf coverage",
+    "cov": "opener coverage/index.html",
+    "lint": "standard",
+    "jest": "jest ${JEST_CI_ENV:-'--notify'}",
+    "test": "npm run clean && standard && npm run jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "html",
+      "text-summary"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "standard": {
+    "env": [
+      "jest",
+      "node"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpareja/node-grpc-error-strategy.git"
+  },
+  "author": "Mario Pareja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mpareja/node-grpc-error-strategy/issues"
+  },
+  "homepage": "https://github.com/mpareja/node-grpc-error-strategy#readme"
+}
