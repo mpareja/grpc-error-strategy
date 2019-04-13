@@ -20,7 +20,7 @@ interface ErrorStrategy {
 
 Here are some examples of how you might use this library:
 
-```
+```javascript
 const { unavailable, badRequest } = require('grpc-error-strategy')
 
 let thing
@@ -61,7 +61,7 @@ It may be wise to decouple your code from the technology used to trigger it (see
 
 Therefore, consider accepting ErrorStrategy instances instead of importing them directly to keep code agnostic of the triggering technology:
 
-```
+```javascript
 // you might consider destructuring ErrorStrategy into the methods you need...
 const anOperation = (ErrorStrategy) => (input) => {
   let thing
@@ -75,7 +75,7 @@ const anOperation = (ErrorStrategy) => (input) => {
 
 If your code is triggering specific downstream technology, then importing the appropriate ErrorStrategy is reasonable:
 
-```
+```javascript
 const { propagate } = require('grpc-error-strategy') // legit, you know it's gRPC your calling
 
 const anOperation = (ErrorStrategy) => (input) => {
