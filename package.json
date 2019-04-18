@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "grpc": "^1.20.0",
     "jest": "^24.7.1",
     "opener": "^1.5.1",
     "rimraf": "^2.6.3",

@@ -1,3 +1,6 @@
+// Hard-code the GRPC statuses so we don't need to import `grpc` module.
+// We do, however, _test_ these values using the `grpc` module.
+// status codes: https://grpc.io/grpc/node/grpc.html#.status__anchor
 const errors = [
   { code: 2, type: 'badImplementation' },
   { code: 3, type: 'badRequest' },

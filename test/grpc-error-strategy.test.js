@@ -1,17 +1,17 @@
+const { status } = require('grpc')
 const GrpcErrorStrategy = require('../')
 
 const A_DESCRIPTION = 'my description'
 const A_PARENT_DESCRIPTION = 'parent description'
 
-// status codes: https://grpc.io/grpc/node/grpc.html
 ;[
-  { code: 2, type: 'badImplementation' },
-  { code: 3, type: 'badRequest' },
-  { code: 5, type: 'notFound' },
-  { code: 7, type: 'forbidden' },
-  { code: 9, type: 'preconditionFailed' },
-  { code: 12, type: 'notImplemented' },
-  { code: 14, type: 'unavailable' }
+  { code: status.UNKNOWN, type: 'badImplementation' },
+  { code: status.INVALID_ARGUMENT, type: 'badRequest' },
+  { code: status.NOT_FOUND, type: 'notFound' },
+  { code: status.PERMISSION_DENIED, type: 'forbidden' },
+  { code: status.FAILED_PRECONDITION, type: 'preconditionFailed' },
+  { code: status.UNIMPLEMENTED, type: 'notImplemented' },
+  { code: status.UNAVAILABLE, type: 'unavailable' }
 ].forEach(testError)
 
 describe('propagate status information from inner gRPC errors', () => {
