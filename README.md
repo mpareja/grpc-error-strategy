@@ -1,5 +1,7 @@
 # grpc-error-strategy
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mpareja/node-grpc-error-strategy.svg)](https://greenkeeper.io/)
+
 A gRPC implementation of the [error strategy interface](#error-strategy-interface).
 
 ## ErrorStrategy Interface
