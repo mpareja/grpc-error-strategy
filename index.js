@@ -20,7 +20,9 @@ for (let { type, code } of errors) {
   module.exports[type] = (msg, inner) => {
     const error = new Error(msg)
     error.code = code
-    error.inner = inner
+    if (inner) {
+      error.inner = inner
+    }
     return error
   }
 }
