@@ -1,6 +1,6 @@
 {
   "name": "grpc-error-strategy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A gRPC implementation of the error strategy interface",
   "main": "index.js",
   "dependencies": {},
