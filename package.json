@@ -9,7 +9,7 @@
     "jest": "^24.7.1",
     "opener": "^1.5.1",
     "rimraf": "^2.6.3",
-    "standard": "^12.0.1"
+    "standard": "^13.0.1"
   },
   "scripts": {
     "clean": "rimraf coverage",
