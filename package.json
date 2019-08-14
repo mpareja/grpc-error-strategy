@@ -8,7 +8,7 @@
     "grpc": "^1.20.0",
     "jest": "^24.7.1",
     "opener": "^1.5.1",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.0",
     "standard": "^12.0.1"
   },
   "scripts": {
