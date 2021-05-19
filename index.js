@@ -16,7 +16,7 @@ const errorsByCode = errors.reduce((acc, current) => {
   return acc
 }, {})
 
-for (let { type, code } of errors) {
+for (const { type, code } of errors) {
   module.exports[type] = (msg, inner) => {
     const error = new Error(msg)
     error.code = code
